@@ -12,7 +12,7 @@
   text-align: center;
   transition: all 0.3s ease-in;
   cursor: pointer;
-  color: rgba(47, 53, 66, 1);
+  color: #2f3542;
 }
 .download:hover {
   background: #0068fa;

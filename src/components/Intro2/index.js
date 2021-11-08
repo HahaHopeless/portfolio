@@ -21,6 +21,29 @@ const Intro2 = (props) => {
     var t3 = new Timeline();
     var t4 = new Timeline();
 
+    // gsap.to(".iMake", {
+    //   scrollTrigger: {
+    //     trigger: ".hero2",
+    //     start: "top center",
+    //     end: "bottom center",
+    //     scrub: 1,
+    //     markers: "true",
+    //   },
+    //   color: "#0068fa",
+    // });
+
+    // gsap.to(".iMake", {
+    //   scrollTrigger: {
+    //     trigger: ".hero2",
+    //     end: "top center",
+    //     start: "bottom center",
+    //     scrub: 1,
+    //     markers: "true",
+    //   },
+    //   color: "#2f3542",
+    //   immediateRender: false,
+    // });
+
     t1.fromTo(
       ".iMake",
       { opacity: 0, translateX: -30 },
@@ -29,7 +52,7 @@ const Intro2 = (props) => {
         translateX: 10,
         scrollTrigger: {
           trigger: ".iMake",
-          toggleActions: "play none none none",
+          toggleActions: "play none none reverse",
           start: "top center",
           end: "bottom center",
           scrub: 1.5,
@@ -136,7 +159,7 @@ const Intro2 = (props) => {
               userSelect: "none",
             }}
           >
-            <FormattedMessage id='I Make' />
+            <FormattedMessage id='iMake' />
           </h1>
           <h1 style={{ marginBottom: "-4.5vw" }}>
             <span
