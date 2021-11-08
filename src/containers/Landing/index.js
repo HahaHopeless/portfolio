@@ -23,7 +23,7 @@ const Landing = () => {
         animeClass={`fade-in ${fadeInOut}`}
       />
       <Intro1 />
-      {/* <Intro2 /> */}
+      <Intro2 />
       <div style={{ height: "220vh" }}></div>
     </>
   );

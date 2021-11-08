@@ -94,6 +94,14 @@ const Intro2 = (props) => {
         // markers: true,
       },
     });
+
+    //ScrollTrigger broke react-router. Below is a fix for it.
+    return () => {
+      ScrollTrigger.getAll().forEach((instance) => {
+        instance.kill();
+      });
+      gsap.killTweensOf(window);
+    };
   }, []);
 
   return (
@@ -109,14 +117,16 @@ const Intro2 = (props) => {
             width={400}
             isStopped={false}
             style={{
-              marginTop: "-10vh",
               zIndex: 99,
               userSelect: "none",
               cursor: "default",
             }}
           />
         </div>
-        <div className='col-md-7 ml-5 d-flex justify-content-center  flex-column'>
+        <div
+          className='col-md-7 d-flex justify-content-center  flex-column'
+          style={{ marginLeft: "5vw" }}
+        >
           <h1
             className='iMake'
             style={{
@@ -128,43 +138,41 @@ const Intro2 = (props) => {
           >
             <FormattedMessage id='I Make' />
           </h1>
-          <h1
-            className=''
-            style={{
-              fontWeight: "800",
-              fontSize: "4vw",
-              // marginBottom: "-5vw",
-              textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
-              marginLeft: "-0.35vw",
-              userSelect: "none",
-            }}
-          >
-            {"WEBSITES"}
+          <h1 style={{ marginBottom: "-4.5vw" }}>
+            <span
+              style={{
+                fontWeight: "900",
+                fontSize: "11vw",
+                textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
+                marginLeft: "-0.35vw",
+                userSelect: "none",
+              }}
+            >
+              APPS
+            </span>
+            <span
+              style={{
+                fontWeight: "400",
+                fontSize: "8vw",
+                textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
+                marginLeft: "-0.35vw",
+                userSelect: "none",
+              }}
+            >
+              {" &"}
+            </span>
           </h1>
           <h1
             className=''
             style={{
-              fontWeight: "800",
-              fontSize: "8vw",
-              // marginBottom: "-5vw",
-              textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
-              marginLeft: "-0.35vw",
-              userSelect: "none",
-            }}
-          >
-            {"&"}
-          </h1>
-          <h1
-            className=''
-            style={{
-              fontWeight: "800",
+              fontWeight: "900",
               width: "100%",
-              fontSize: "8vw",
+              fontSize: "11vw",
               textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
               userSelect: "none",
             }}
           >
-            MOBILE APPS
+            WEBSITES
           </h1>
         </div>
       </div>
