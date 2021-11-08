@@ -1,13 +1,11 @@
 import "./styles.css";
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import Lottie from "react-lottie";
 import animationData from "../../assets/animations/services.json";
 import { Timeline } from "gsap/gsap-core";
-import { create } from "@lottiefiles/lottie-interactivity";
-import { Player } from "@lottiefiles/react-lottie-player";
 
 const Intro2 = (props) => {
   const defaultOptions = {
@@ -15,8 +13,6 @@ const Intro2 = (props) => {
     autoplay: true,
     animationData: animationData,
   };
-
-  let myRef = useRef();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -98,22 +94,6 @@ const Intro2 = (props) => {
         // markers: true,
       },
     });
-
-    // myRef.current.addEventListener("ready", function (e) {
-    //   create({
-    //     mode: "scroll",
-    //     player: "#devices",
-    //     actions: [
-    //       {
-    //         visibility: [0, 1],
-    //         type: "seek",
-    //         frames: [0, 100],
-    //       },
-    //     ],
-    //   });
-    // });
-
-    console.log("________________REF_____________: ", myRef);
   }, []);
 
   return (
@@ -123,22 +103,18 @@ const Intro2 = (props) => {
     >
       <div className='container-fluid row '>
         <div className='col-md-4 d-flex align-items-start animation'>
-          <Player
-            ref={myRef}
-            id='devices'
-            autoplay
-            loop
-            // options={defaultOptions}
-            src={require("../../assets/animations/services.json")}
-            height={700}
-            width={350}
+          <Lottie
+            options={defaultOptions}
+            height={500}
+            width={400}
             isStopped={false}
             style={{
+              marginTop: "-10vh",
               zIndex: 99,
               userSelect: "none",
               cursor: "default",
             }}
-          ></Player>
+          />
         </div>
         <div className='col-md-7 ml-5 d-flex justify-content-center  flex-column'>
           <h1

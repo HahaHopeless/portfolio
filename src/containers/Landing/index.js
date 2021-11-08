@@ -1,7 +1,8 @@
 import "./styles.css";
-import React from "react";
+import React, { useEffect } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ScrollUp from "../../components/ScrollUp";
-import Intro1 from "../../components/Intro1/index123";
+import Intro1 from "../../components/Intro1/index";
 import Intro2 from "../../components/Intro2";
 
 const Landing = () => {
@@ -11,6 +12,10 @@ const Landing = () => {
     }, 200);
   };
 
+  // useEffect(() => {
+  //   ScrollTrigger.refresh();
+  // }, [ScrollTrigger.getAll()]);
+
   return (
     <>
       <ScrollUp
@@ -18,8 +23,7 @@ const Landing = () => {
         animeClass={`fade-in ${fadeInOut}`}
       />
       <Intro1 />
-      {/* <div style={{ height: "220vh" }}></div> */}
-      <Intro2 />
+      {/* <Intro2 /> */}
       <div style={{ height: "220vh" }}></div>
     </>
   );

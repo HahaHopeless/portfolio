@@ -1,30 +1,25 @@
 import "./styles.css";
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { FormattedMessage } from "react-intl";
 import { setGlobalLanguage } from "../../store/actionTypes";
 import { useLocation } from "react-router-dom";
-import ReactAnime from "react-animejs";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = (props) => {
-  const { Anime, stagger } = ReactAnime;
-
   const setLang = (e) => {
     props.setGlobalLanguage(e);
   };
 
   var location = useLocation();
 
-  document.addEventListener(
-    "DOMContentLoaded",
-    () => {
-      console.log("DOM fully loaded");
-    },
-    false
-  );
+  // document.addEventListener(
+  //   "DOMContentLoaded",
+  //   () => {
+  //     console.log("DOM fully loaded");
+  //   },
+  //   false
+  // );
 
   return (
     <nav className='app-navbar ml-auto mr-auto'>
@@ -36,7 +31,6 @@ const Navbar = (props) => {
               location.pathname === "/" ? "app-link active" : "app-link"
             }
           >
-            {/* <FontAwesomeIcon icon={faHome} /> */}
             <FormattedMessage id='home' />
           </Link>
         </li>
@@ -58,15 +52,14 @@ const Navbar = (props) => {
               location.pathname === "/contact" ? "app-link active" : "app-link"
             }
           >
-            {/* <FontAwesomeIcon icon={faEnvelope} />{" "} */}
             <FormattedMessage id='contact' />
           </Link>
         </li>
         <li>
-          <div class='btn-group'>
+          <div className='btn-group'>
             <button
               type='button'
-              class='btn btn-secondary btn-sm dropdown-toggle'
+              className='btn btn-secondary btn-sm dropdown-toggle'
               data-toggle='dropdown'
               aria-haspopup='true'
               aria-expanded='false'
@@ -77,9 +70,9 @@ const Navbar = (props) => {
               />
               <span>{props.lang.toUpperCase()}</span>
             </button>
-            <div class='dropdown-menu'>
+            <div className='dropdown-menu'>
               <a
-                class='dropdown-item'
+                className='dropdown-item'
                 onClick={() => {
                   setLang("en");
                 }}
@@ -91,7 +84,7 @@ const Navbar = (props) => {
                 <span>EN</span>
               </a>
               <a
-                class='dropdown-item'
+                className='dropdown-item'
                 onClick={() => {
                   setLang("de");
                 }}

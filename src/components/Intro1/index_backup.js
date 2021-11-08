@@ -1,5 +1,5 @@
 import "./styles.css";
-import React, { useEffect, useLayoutEffect } from "react";
+import React, { useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
@@ -34,7 +34,6 @@ const Intro1 = (props) => {
     var t2 = new Timeline();
     var t3 = new Timeline();
     var t4 = new Timeline();
-    var t5 = new Timeline();
 
     t1.fromTo(
       ".hiIm",
@@ -99,24 +98,15 @@ const Intro1 = (props) => {
       }
     );
 
-    t5.to(".download", {
+    gsap.timeline({
       scrollTrigger: {
         trigger: ".hero",
-        pin: ".hero",
-        start: "center center",
+        pin: true,
+        start: "center 60%",
         end: "+=1500",
         // scrub: true,
-        // markers: true,
       },
     });
-
-    //ScrollTrigger broke react-router. Below is a fix for it.
-    return () => {
-      ScrollTrigger.getAll().forEach((instance) => {
-        instance.kill();
-      });
-      gsap.killTweensOf(window);
-    };
   }, []);
 
   return (
@@ -144,10 +134,9 @@ const Intro1 = (props) => {
                 fontWeight: "800",
                 fontSize: "14vw",
                 marginBottom: "-5vw",
-                textShadow: "0px 0px 10px rgba(0, 104, 250, 0.3)",
+                textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
                 marginLeft: "-0.35vw",
                 userSelect: "none",
-                color: "#0068fa",
               }}
             >
               Mohsin
@@ -173,7 +162,8 @@ const Intro1 = (props) => {
                   marginRight: "8px",
                 }}
               />
-              <FormattedMessage id='downloadCV' />
+              {"      "}
+              Download CV
             </div>
           </div>
         </div>
