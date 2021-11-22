@@ -2,8 +2,10 @@ import "./styles.css";
 import React, { useEffect, useLayoutEffect } from "react";
 import { FormattedMessage } from "react-intl";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import gsap from "gsap";
 import Lottie from "react-lottie";
+// import animationData from "../../assets/animations/dev2.json";
 import animationData from "../../assets/animations/developer.json";
 import { Timeline } from "gsap/gsap-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -84,27 +86,28 @@ const Intro1 = (props) => {
       }
     );
     t4.fromTo(
-      ".download",
-      { rotationX: -90 },
+      ".btn-hover",
+      { width: 0 },
       {
-        rotationX: 0,
+        width: 150,
         scrollTrigger: {
-          trigger: ".download",
+          trigger: ".btn-hover",
           toggleActions: "play none none none",
           start: "top -80%",
           end: "bottom center",
           scrub: 0.2,
-          ease: "ease-in",
+          ease: "bounce",
         },
       }
     );
 
-    t5.to(".download", {
+    t5.to(".hero", {
       scrollTrigger: {
         trigger: ".hero",
         pin: ".hero",
         start: "center center",
-        end: "+=1500",
+        end: "+=2000",
+        ease: "ease-in",
         // scrub: true,
         // markers: true,
       },
@@ -138,48 +141,38 @@ const Intro1 = (props) => {
             >
               <FormattedMessage id='helloIm' />
             </h1>
+            <h1 className='mohsin gradientText blue'>Mohsin</h1>
             <h1
-              className='mohsin'
+              className='kamalakbar gradientText black'
               style={{
-                fontWeight: "800",
-                fontSize: "14vw",
-                marginBottom: "-5vw",
-                textShadow: "0px 0px 10px rgba(0, 104, 250, 0.3)",
-                marginLeft: "-0.35vw",
-                userSelect: "none",
-                color: "#0068fa",
-              }}
-            >
-              Mohsin
-            </h1>
-            <h1
-              className='kamalakbar'
-              style={{
-                fontWeight: "800",
                 fontSize: "8vw",
-                textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
-                userSelect: "none",
+                marginLeft: "0.08vw",
               }}
             >
               Kamal Akbar
             </h1>
             <br></br>
-            <div className='download' onClick={handleDownload}>
-              <FontAwesomeIcon
-                icon={faFileDownload}
-                opacity={0.4}
-                style={{
-                  fontSize: "20px",
-                  marginRight: "8px",
-                }}
-              />
-              <FormattedMessage id='downloadCV' />
+            <div
+              className='btn-hover color-9 d-flex justify-content-center align-items-center'
+              onClick={handleDownload}
+            >
+              <div style={{ minWidth: "150px" }}>
+                <FontAwesomeIcon
+                  icon={faFileDownload}
+                  className='downloadIcon'
+                  opacity={0.4}
+                />
+                <span style={{ userSelect: "none", color: "white" }}>
+                  <FormattedMessage id='downloadCV' />
+                </span>
+              </div>
             </div>
           </div>
         </div>
 
         <div className='col-md-5 d-flex align-items-start animation'>
           <Lottie
+            id='firstLottie'
             options={defaultOptions}
             height={500}
             width={400}
@@ -189,6 +182,7 @@ const Intro1 = (props) => {
               zIndex: 99,
               userSelect: "none",
               cursor: "default",
+              pointerEvents: "none",
             }}
           />
         </div>

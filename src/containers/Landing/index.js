@@ -1,9 +1,9 @@
 import "./styles.css";
-import React, { useEffect } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React from "react";
 import ScrollUp from "../../components/ScrollUp";
-import Intro1 from "../../components/Intro1/index";
+import Intro1 from "../../components/Intro1";
 import Intro2 from "../../components/Intro2";
+import Intro3 from "../../components/Intro3";
 
 const Landing = () => {
   const fadeInOut = () => {
@@ -24,6 +24,7 @@ const Landing = () => {
       />
       <Intro1 />
       <Intro2 />
+      <Intro3 />
       <div style={{ height: "220vh" }}></div>
     </>
   );

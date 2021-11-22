@@ -1,23 +1,152 @@
 .download {
-  width: 15vw;
-  /* max-width: 30vw; */
-  border: 1px solid #0068fa;
-  border-radius: 10px;
-  height: 50px;
-  line-height: 45px;
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  align-items: center;
+  padding: 1rem;
+  background: #efefef;
+  border: none;
+  border-radius: 0.5rem;
+  color: #444;
+  font-size: 1rem;
   text-align: center;
-  transition: all 0.3s ease-in;
+  outline: none;
+  width: 170px;
+  height: auto;
   cursor: pointer;
-  color: #2f3542;
+  transition: 0.2s ease-in-out;
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7),
+    -6px -6px 10px rgba(255, 255, 255, 0.5),
+    6px 6px 8px rgba(255, 255, 255, 0.075), 6px 6px 10px rgba(0, 0, 0, 0.15);
 }
 .download:hover {
-  background: #0068fa;
-  color: white !important;
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6),
+    -2px -2px 4px rgba(255, 255, 255, 0.4),
+    2px 2px 2px rgba(255, 255, 255, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
+.download:active {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.7),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 2px rgba(255, 255, 255, 0.075),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
 .animation {
   transform: scale(1.5);
+}
+
+.gradientText {
+  background-size: 100%;
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+
+  font-weight: 800;
+  font-size: 14vw;
+  margin-bottom: -5vw;
+  margin-left: -0.35vw;
+  user-select: none;
+}
+
+.gradientText.blue {
+  background-color: #0068fa;
+  text-shadow: 0px 0px 10px rgba(0, 104, 250, 0.3);
+  background-image: linear-gradient(45deg, #0068fa, #627ce0);
+}
+.gradientText.black {
+  background-color: #25435d;
+  text-shadow: 0px 0px 10px rgba(47, 53, 66, 0.3);
+  background-image: linear-gradient(45deg, #25435d, #162c3f);
+  margin-bottom: 0vw;
+}
+.downloadIcon {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+/* GRADIENT BUTTON */
+
+.btn-hover {
+  font-weight: 600;
+  color: #fff;
+  height: 50px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  font-size: 1rem;
+  outline: none;
+  width: 170px;
+  cursor: pointer;
+
+  border-radius: 10px;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:focus {
+  outline: none;
+}
+
+.btn-hover.color-1 {
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #40e495,
+    #30dd8a,
+    #2bb673
+  );
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+.btn-hover.color-2 {
+  background-image: linear-gradient(
+    to right,
+    #f5ce62,
+    #e43603,
+    #fa7199,
+    #e85a19
+  );
+  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+.btn-hover.color-3 {
+  background-image: linear-gradient(
+    to right,
+    #667eea,
+    #764ba2,
+    #6b8dd6,
+    #8e37d7
+  );
+  box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+.btn-hover.color-5 {
+  background-image: linear-gradient(
+    to right,
+    #0ba360,
+    #3cba92,
+    #30dd8a,
+    #2bb673
+  );
+  box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}
+.btn-hover.color-9 {
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #4481eb,
+    #0169fb,
+    #627ce0
+  );
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+.btn-hover.color-9:active {
+  background-image: linear-gradient(to right, #0169fb, #0169fb);
+  box-shadow: 0 0px 25px 10px rgba(65, 132, 234, 0.75);
 }

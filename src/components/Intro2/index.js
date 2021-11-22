@@ -60,49 +60,31 @@ const Intro2 = (props) => {
       }
     );
     t2.fromTo(
-      ".mohsin",
-      { scale: 2, opacity: 0 },
+      ".apps",
+      { width: 0 },
       {
-        scale: 1,
-        opacity: 1,
+        width: "100%",
         scrollTrigger: {
-          trigger: ".mohsin",
+          trigger: ".apps",
           toggleActions: "play none none none",
           start: "center center",
-          end: "bottom top",
+          end: "+=150%",
           scrub: 1,
-          onLeave: () => {},
-          onEnterBack: () => {},
         },
       }
     );
     t3.fromTo(
-      ".kamalakbar",
-      { translateY: 500, opacity: 0 },
+      ".websites",
+      { transform: "scaleY(0)" },
       {
-        translateY: 0,
-        opacity: 1,
+        transform: "scaleY(1)",
         scrollTrigger: {
-          trigger: ".kamalakbar",
+          trigger: ".websites",
           toggleActions: "play none none none",
-          start: "top -5%",
-          end: "bottom center",
+          start: "top top",
+          end: "+=80%",
           scrub: 1,
-        },
-      }
-    );
-    t4.fromTo(
-      ".download",
-      { rotationX: -90 },
-      {
-        rotationX: 0,
-        scrollTrigger: {
-          trigger: ".download",
-          toggleActions: "play none none none",
-          start: "top -80%",
-          end: "bottom center",
-          scrub: 0.2,
-          ease: "ease-in",
+          markers: true,
         },
       }
     );
@@ -161,19 +143,24 @@ const Intro2 = (props) => {
           >
             <FormattedMessage id='iMake' />
           </h1>
-          <h1 style={{ marginBottom: "-4.5vw" }}>
+          {/* <h1 style={{ marginBottom: "-4.5vw" }}> */}
+          <span
+            className='apps'
+            style={{
+              fontWeight: "900",
+              fontSize: "11vw",
+              textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
+              marginLeft: "-0.35vw",
+              userSelect: "none",
+              textOverflow: "clip",
+              overflow: "hidden",
+              marginBottom: "-4.5vw",
+              whiteSpace: "nowrap",
+            }}
+          >
+            APPS
             <span
-              style={{
-                fontWeight: "900",
-                fontSize: "11vw",
-                textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
-                marginLeft: "-0.35vw",
-                userSelect: "none",
-              }}
-            >
-              APPS
-            </span>
-            <span
+              className='and'
               style={{
                 fontWeight: "400",
                 fontSize: "8vw",
@@ -184,15 +171,17 @@ const Intro2 = (props) => {
             >
               {" &"}
             </span>
-          </h1>
+          </span>
+
+          {/* </h1> */}
           <h1
-            className=''
+            className='websites'
             style={{
               fontWeight: "900",
-              width: "100%",
               fontSize: "11vw",
               textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
               userSelect: "none",
+              transformOrigin: "top",
             }}
           >
             WEBSITES
