@@ -75,16 +75,15 @@ const Intro2 = (props) => {
     );
     t3.fromTo(
       ".websites",
-      { transform: "scaleY(0)" },
+      { rotationX: 90 },
       {
-        transform: "scaleY(1)",
+        rotationX: 0,
         scrollTrigger: {
           trigger: ".websites",
           toggleActions: "play none none none",
-          start: "top top",
-          end: "+=80%",
+          start: "top -20%",
+          end: "+=60%",
           scrub: 1,
-          markers: true,
         },
       }
     );
@@ -139,6 +138,7 @@ const Intro2 = (props) => {
               fontSize: "4vw",
               textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
               userSelect: "none",
+              marginBottom: "-3vw",
             }}
           >
             <FormattedMessage id='iMake' />
@@ -154,7 +154,7 @@ const Intro2 = (props) => {
               userSelect: "none",
               textOverflow: "clip",
               overflow: "hidden",
-              marginBottom: "-4.5vw",
+              marginBottom: "-5vw",
               whiteSpace: "nowrap",
             }}
           >

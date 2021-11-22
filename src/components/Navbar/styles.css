@@ -47,3 +47,6 @@
   margin-top: 5px;
   min-width: 0rem;
 }
+.btn-group > button > span {
+  color: white !important;
+}
