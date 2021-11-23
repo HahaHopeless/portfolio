@@ -138,7 +138,7 @@ const Intro3 = (props) => {
           style={{ marginLeft: "5vw" }}
         >
           <h1
-            className='iMake'
+            className=''
             style={{
               fontWeight: "800",
               fontSize: "4vw",

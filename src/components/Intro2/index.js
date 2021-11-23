@@ -70,10 +70,14 @@ const Intro2 = (props) => {
     );
     t4.fromTo(
       ".apps",
-      { color: "rgb(47, 53, 66)" },
       {
-        rotationX: 0,
-        color: "rgb(0, 104, 250)",
+        backgroundColor: "rgb(47, 53, 66)",
+        textShadow: "2px 4px 4px rgba(255, 255, 255, 0)",
+      },
+      {
+        backgroundColor: "rgb(0, 104, 255)",
+        textShadow:
+          "2px 4px 4px rgba(255, 255, 255, 0.15), 0px 0px 5px rgba(0, 104, 254, 0.8)",
         scrollTrigger: {
           trigger: ".apps",
           toggleActions: "play none none none",
@@ -85,10 +89,14 @@ const Intro2 = (props) => {
     );
     t5.fromTo(
       ".websites",
-      { color: "rgb(47, 53, 66)" },
       {
-        rotationX: 0,
-        color: "rgb(0, 104, 250)",
+        backgroundColor: "rgb(47, 53, 66)",
+        textShadow: "2px 4px 4px rgba(255, 255, 255, 0)",
+      },
+      {
+        backgroundColor: "rgb(0, 104, 255)",
+        textShadow:
+          "2px 4px 4px rgba(255, 255, 255, 0.15), 0px 0px 5px rgba(0, 104, 254, 0.8)",
         scrollTrigger: {
           trigger: ".websites",
           toggleActions: "play none none none",
@@ -123,7 +131,7 @@ const Intro2 = (props) => {
   return (
     <section
       style={{ height: "100vh" }}
-      className='hero2 vw-100 d-flex flex-column align-items-center justify-content-center overflow-hidden'
+      className='hero2 vw-100 d-flex flex-column align-items-center justify-content-center '
     >
       <div className='container-fluid row '>
         <div className='col-md-4 d-flex align-items-start animation'>
@@ -141,7 +149,10 @@ const Intro2 = (props) => {
         </div>
         <div
           className='col-md-7 d-flex justify-content-center  flex-column'
-          style={{ marginLeft: "5vw", display: "inline-block" }}
+          style={{
+            marginLeft: "5vw",
+            display: "inline-block",
+          }}
         >
           <h1
             className='iMake'
@@ -160,7 +171,7 @@ const Intro2 = (props) => {
             className='appsAnd'
             style={{
               fontWeight: "900",
-              fontSize: "11vw",
+              fontSize: "10.5vw",
               textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
               marginLeft: "-0.35vw",
               userSelect: "none",
@@ -169,8 +180,7 @@ const Intro2 = (props) => {
               marginBottom: "-5vw",
               whiteSpace: "nowrap",
               display: "inline-block",
-              transform:
-                "skew(-60deg,20deg) scaleY(0.66667) translate(70px, 0px)",
+              transform: "skew(-60deg,20deg) scaleY(0.6) translate(70px, 0px)",
             }}
           >
             <span className='apps'>APPS </span>
@@ -195,11 +205,11 @@ const Intro2 = (props) => {
             className='websites'
             style={{
               fontWeight: "900",
-              fontSize: "11vw",
+              fontSize: "10.5vw",
               textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
               userSelect: "none",
               transformOrigin: "top",
-              transform: "skew(0deg, 20deg)",
+              transform: "skew(0deg, 21deg)",
             }}
           >
             WEBSITES
