@@ -20,36 +20,17 @@ const Intro2 = (props) => {
     var t2 = new Timeline();
     var t3 = new Timeline();
     var t4 = new Timeline();
-
-    // gsap.to(".iMake", {
-    //   scrollTrigger: {
-    //     trigger: ".hero2",
-    //     start: "top center",
-    //     end: "bottom center",
-    //     scrub: 1,
-    //     markers: "true",
-    //   },
-    //   color: "#0068fa",
-    // });
-
-    // gsap.to(".iMake", {
-    //   scrollTrigger: {
-    //     trigger: ".hero2",
-    //     end: "top center",
-    //     start: "bottom center",
-    //     scrub: 1,
-    //     markers: "true",
-    //   },
-    //   color: "#2f3542",
-    //   immediateRender: false,
-    // });
+    var t5 = new Timeline();
 
     t1.fromTo(
       ".iMake",
-      { opacity: 0, translateX: -30 },
+      {
+        opacity: 0,
+        translateX: "translate(80px, 75px) rotate(20deg) skew(20deg, 0deg)",
+      },
       {
         opacity: 1,
-        translateX: 10,
+        translateX: "translate(130px, 90px) rotate(20deg) skew(20deg, 0deg)",
         scrollTrigger: {
           trigger: ".iMake",
           toggleActions: "play none none reverse",
@@ -60,12 +41,12 @@ const Intro2 = (props) => {
       }
     );
     t2.fromTo(
-      ".apps",
+      ".appsAnd",
       { width: 0 },
       {
         width: "100%",
         scrollTrigger: {
-          trigger: ".apps",
+          trigger: ".appsAnd",
           toggleActions: "play none none none",
           start: "center center",
           end: "+=150%",
@@ -81,10 +62,41 @@ const Intro2 = (props) => {
         scrollTrigger: {
           trigger: ".websites",
           toggleActions: "play none none none",
-          start: "top -20%",
+          start: "top -50%",
           end: "+=60%",
           scrub: 1,
         },
+      }
+    );
+    t4.fromTo(
+      ".apps",
+      { color: "rgb(47, 53, 66)" },
+      {
+        rotationX: 0,
+        color: "rgb(0, 104, 250)",
+        scrollTrigger: {
+          trigger: ".apps",
+          toggleActions: "play none none none",
+          start: "top -100%",
+          end: "+=100%",
+          scrub: 1,
+        },
+      }
+    );
+    t5.fromTo(
+      ".websites",
+      { color: "rgb(47, 53, 66)" },
+      {
+        rotationX: 0,
+        color: "rgb(0, 104, 250)",
+        scrollTrigger: {
+          trigger: ".websites",
+          toggleActions: "play none none none",
+          start: "top -100%",
+          end: "+=100%",
+          scrub: 1,
+        },
+        markers: true,
       }
     );
 
@@ -129,7 +141,7 @@ const Intro2 = (props) => {
         </div>
         <div
           className='col-md-7 d-flex justify-content-center  flex-column'
-          style={{ marginLeft: "5vw" }}
+          style={{ marginLeft: "5vw", display: "inline-block" }}
         >
           <h1
             className='iMake'
@@ -138,14 +150,14 @@ const Intro2 = (props) => {
               fontSize: "4vw",
               textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
               userSelect: "none",
-              marginBottom: "-3vw",
+              // marginBottom: "-3vw",
             }}
           >
             <FormattedMessage id='iMake' />
           </h1>
           {/* <h1 style={{ marginBottom: "-4.5vw" }}> */}
           <span
-            className='apps'
+            className='appsAnd'
             style={{
               fontWeight: "900",
               fontSize: "11vw",
@@ -156,9 +168,13 @@ const Intro2 = (props) => {
               overflow: "hidden",
               marginBottom: "-5vw",
               whiteSpace: "nowrap",
+              display: "inline-block",
+              transform:
+                "skew(-60deg,20deg) scaleY(0.66667) translate(70px, 0px)",
             }}
           >
-            APPS
+            <span className='apps'>APPS </span>
+
             <span
               className='and'
               style={{
@@ -167,9 +183,10 @@ const Intro2 = (props) => {
                 textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
                 marginLeft: "-0.35vw",
                 userSelect: "none",
+                display: "inline-block",
               }}
             >
-              {" &"}
+              {`  &`}
             </span>
           </span>
 
@@ -182,6 +199,7 @@ const Intro2 = (props) => {
               textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
               userSelect: "none",
               transformOrigin: "top",
+              transform: "skew(0deg, 20deg)",
             }}
           >
             WEBSITES
