@@ -134,7 +134,7 @@ const Intro3 = (props) => {
     >
       <div className='container-fluid row '>
         <div
-          className='col-md-7 d-flex justify-content-center  flex-column'
+          className='col-md-7 d-flex  flex-column'
           style={{ marginLeft: "5vw" }}
         >
           <h1

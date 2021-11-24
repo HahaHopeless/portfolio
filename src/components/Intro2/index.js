@@ -131,7 +131,7 @@ const Intro2 = (props) => {
   return (
     <section
       style={{ height: "100vh" }}
-      className='hero2 vw-100 d-flex flex-column align-items-center justify-content-center '
+      className='hero2 vw-100 d-flex flex-column align-items-center justify-content-center overflow-hidden'
     >
       <div className='container-fluid row '>
         <div className='col-md-4 d-flex align-items-start animation'>

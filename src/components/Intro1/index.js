@@ -2,9 +2,10 @@ import "./styles.css";
 import React, { useEffect, useLayoutEffect } from "react";
 import { FormattedMessage } from "react-intl";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import gsap from "gsap";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
+import Lottie from "lottie-react";
+import { useLottie, useLottieInteractivity } from "lottie-react";
 // import animationData from "../../assets/animations/dev2.json";
 import animationData from "../../assets/animations/developer.json";
 import { Timeline } from "gsap/gsap-core";
@@ -13,12 +14,6 @@ import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
 import { saveAs } from "file-saver";
 
 const Intro1 = (props) => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-  };
-
   const handleDownload = () => {
     //Use the commented part only when you get the CONTENT of the file instead of the whole file...
     // let blob = new Blob([require("../../assets/documents/CV.docx")], {
@@ -106,7 +101,7 @@ const Intro1 = (props) => {
         trigger: ".hero",
         pin: ".hero",
         start: "center center",
-        end: "+=2000",
+        end: "+=1500",
         ease: "ease-in",
         // scrub: true,
         // markers: true,
@@ -121,6 +116,37 @@ const Intro1 = (props) => {
       gsap.killTweensOf(window);
     };
   }, []);
+
+  const interactivity = {
+    mode: "scroll",
+    actions: [
+      {
+        visibility: [0, 0.2],
+        type: "stop",
+        frames: [10],
+      },
+      {
+        visibility: [0.2, 0.45],
+        type: "seek",
+        frames: [10, 22],
+      },
+      {
+        visibility: [0.45, 1.0],
+        type: "loop",
+        frames: [22, 110],
+      },
+    ],
+  };
+
+  const style = {
+    height: 500,
+    width: 400,
+    marginTop: "-10vh",
+    zIndex: 99,
+    userSelect: "none",
+    cursor: "default",
+    pointerEvents: "none",
+  };
 
   return (
     <div
@@ -172,18 +198,10 @@ const Intro1 = (props) => {
 
         <div className='col-md-5 d-flex align-items-start animation'>
           <Lottie
-            id='firstLottie'
-            options={defaultOptions}
-            height={500}
-            width={400}
+            animationData={animationData}
+            interactivity={interactivity}
+            style={style}
             isStopped={false}
-            style={{
-              marginTop: "-10vh",
-              zIndex: 99,
-              userSelect: "none",
-              cursor: "default",
-              pointerEvents: "none",
-            }}
           />
         </div>
       </div>
