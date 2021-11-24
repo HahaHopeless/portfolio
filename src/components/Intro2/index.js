@@ -3,8 +3,10 @@ import React, { useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import animationData from "../../assets/animations/services.json";
+import abstract from "../../assets/animations/abstract.json";
 import { Timeline } from "gsap/gsap-core";
 
 const Intro2 = (props) => {
@@ -56,7 +58,7 @@ const Intro2 = (props) => {
     );
     t3.fromTo(
       ".websites",
-      { rotationX: 90 },
+      { rotationX: -90 },
       {
         rotationX: 0,
         scrollTrigger: {
@@ -128,23 +130,49 @@ const Intro2 = (props) => {
     };
   }, []);
 
+  const interactivity = {
+    mode: "scroll",
+    actions: [
+      {
+        visibility: [0.45, 1.0],
+        type: "loop",
+        frames: [22, 110],
+      },
+    ],
+  };
+
   return (
     <section
       style={{ height: "100vh" }}
       className='hero2 vw-100 d-flex flex-column align-items-center justify-content-center overflow-hidden'
     >
+      <Lottie
+        isStopped={false}
+        style={{
+          userSelect: "none",
+          cursor: "default",
+          position: "absolute",
+          top: "10vh",
+          right: 0,
+          zIndex: 1,
+          width: 300,
+          height: 300,
+        }}
+        animationData={abstract}
+        // interactivity={interactivity}
+      />
       <div className='container-fluid row '>
         <div className='col-md-4 d-flex align-items-start animation'>
           <Lottie
-            options={defaultOptions}
-            height={500}
-            width={400}
             isStopped={false}
             style={{
               zIndex: 99,
               userSelect: "none",
               cursor: "default",
+              width: 400,
+              height: 500,
             }}
+            animationData={animationData}
           />
         </div>
         <div
@@ -152,6 +180,7 @@ const Intro2 = (props) => {
           style={{
             marginLeft: "5vw",
             display: "inline-block",
+            zIndex: 999,
           }}
         >
           <h1
@@ -208,7 +237,7 @@ const Intro2 = (props) => {
               fontSize: "10.5vw",
               textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
               userSelect: "none",
-              transformOrigin: "top",
+              transformOrigin: "bottom",
               transform: "skew(0deg, 21deg)",
             }}
           >

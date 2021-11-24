@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 // import Lottie from "react-lottie";
 import Lottie from "lottie-react";
-import { useLottie, useLottieInteractivity } from "lottie-react";
 // import animationData from "../../assets/animations/dev2.json";
 import animationData from "../../assets/animations/developer.json";
 import { Timeline } from "gsap/gsap-core";
