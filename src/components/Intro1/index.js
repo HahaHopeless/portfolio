@@ -100,7 +100,7 @@ const Intro1 = (props) => {
         trigger: ".hero",
         pin: ".hero",
         start: "center center",
-        end: "+=1500",
+        end: "+=1800",
         ease: "ease-in",
         // scrub: true,
         // markers: true,
@@ -139,7 +139,7 @@ const Intro1 = (props) => {
 
   const style = {
     height: 500,
-    width: 400,
+    width: 450,
     marginTop: "-10vh",
     zIndex: 99,
     userSelect: "none",

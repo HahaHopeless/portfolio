@@ -14,7 +14,6 @@ const App = (props) => {
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
-    console.log("SCROLL AT: ", scrollPosition);
   };
 
   useEffect(() => {

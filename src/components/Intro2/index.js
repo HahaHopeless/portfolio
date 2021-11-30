@@ -115,7 +115,7 @@ const Intro2 = (props) => {
         trigger: ".hero2",
         pin: ".hero2",
         start: "center center",
-        end: "+=1500",
+        end: "+=1800",
         // scrub: 1,
         // markers: true,
       },

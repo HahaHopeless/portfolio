@@ -1,5 +1,6 @@
 {
     "builtBy": "Mohsin Kamal Akbar © 2021",
+    "madeWith": "Gemacht mit einem 💻 und ☕ am Wochenenden",
     "home": "Startseite",
     "projects": "Projekte",
     "language": "Sprache",
@@ -10,6 +11,7 @@
     "toSee": "Sie um mehr",
     "more": "ZU SEHEN",
     "helloIm": "Hallo, Ich bin",
-    "downloadCV": "Lebenslauf Herunterladen",
-    "iMake": "Ich Mache"
+    "downloadCV": "Lebenslauf",
+    "iMake": "Ich Mache",
+    "visitWebsite": "Besuchen Sie diese Website"
 }

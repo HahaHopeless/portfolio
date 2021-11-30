@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className='d-flex justify-content-center footer-container'>
-      <p>
-        <FormattedMessage id='builtBy' />
-      </p>
+      <h5>
+        <FormattedMessage id='madeWith' />
+      </h5>
     </footer>
   );
 };
