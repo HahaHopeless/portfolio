@@ -50,3 +50,11 @@
 .btn-group > button > span {
   color: white !important;
 }
+.dropdown-item {
+  display: flex !important;
+  justify-content: center;
+}
+
+.dropdown-menu.show {
+  right: 0;
+}
