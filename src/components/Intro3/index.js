@@ -4,21 +4,14 @@ import { FormattedMessage } from "react-intl";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import Lottie from "react-lottie";
-import animationData from "../../assets/animations/services.json";
 import { Timeline } from "gsap/gsap-core";
 
 const Intro3 = (props) => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-  };
-
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    var t1 = new Timeline();
+    var myTechStack = new Timeline();
 
-    t1.fromTo(
+    myTechStack.fromTo(
       ".myTechStack",
       { scaleY: 0, rotateZ: -90 },
       {
@@ -27,12 +20,11 @@ const Intro3 = (props) => {
         scrollTrigger: {
           trigger: ".myTechStack",
           toggleActions: "play none none reverse",
-          start: "top 10%",
+          start: "top center",
           end: "bottom center",
           scrub: 1.5,
           ease: "elastic",
         },
-        markers: true,
       }
     );
 
@@ -47,7 +39,6 @@ const Intro3 = (props) => {
       },
     });
 
-    //ScrollTrigger broke react-router. Below is a fix for it.
     return () => {
       ScrollTrigger.getAll().forEach((instance) => {
         instance.kill();
@@ -72,8 +63,7 @@ const Intro3 = (props) => {
           overflow: "hidden",
           whiteSpace: "nowrap",
           marginLeft: "-102vw",
-          bottom: "28vh",
-          position: "absolute",
+          marginBottom: "-30vh",
           transformOrigin: "top",
         }}
       >

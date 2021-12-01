@@ -1,5 +1,6 @@
 import "./styles.css";
-import React from "react";
+import React, { useEffect } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ScrollUp from "../../components/ScrollUp";
 import Intro1 from "../../components/Intro1";
 import Intro2 from "../../components/Intro2";
@@ -12,10 +13,6 @@ const Landing = () => {
     }, 200);
   };
 
-  // useEffect(() => {
-  //   ScrollTrigger.refresh();
-  // }, [ScrollTrigger.getAll()]);
-
   return (
     <>
       <ScrollUp
@@ -25,7 +22,6 @@ const Landing = () => {
       <Intro1 />
       <Intro2 />
       <Intro3 />
-      <div style={{ height: "220vh" }}></div>
     </>
   );
 };
