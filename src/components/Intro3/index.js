@@ -27,6 +27,7 @@ const Intro3 = (props) => {
       options: {
         showAngleIndicator: false,
         wireframes: false,
+        background: "white",
       },
     });
 
@@ -48,7 +49,7 @@ const Intro3 = (props) => {
         return Bodies.rectangle(x, y, 40, 40, {
           render: {
             fillStyle: "white",
-            strokeStyle: "blue",
+            strokeStyle: "#0068fa",
             lineWidth: 3,
           },
         });
@@ -128,6 +129,6 @@ const Intro3 = (props) => {
     };
   }, []);
 
-  return <div ref={scene} className='scene' />;
+  return <div ref={scene} className='scene' style={{ textAlign: "center" }} />;
 };
 export default Intro3;
