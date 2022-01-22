@@ -40,13 +40,13 @@ const Intro3 = (props) => {
     // add bodies
     var stack = Composites.stack(
       200,
-      606 - 25.25 - 5 * 40,
+      606 - 25.25 - 5 * 4,
       10,
       5,
       0,
       0,
       function (x, y) {
-        return Bodies.rectangle(x, y, 40, 40, {
+        return Bodies.rectangle(x, y, 70, 70, {
           render: {
             fillStyle: "white",
             strokeStyle: "#0068fa",
@@ -62,32 +62,32 @@ const Intro3 = (props) => {
       Bodies.rectangle(400, 0, 800, 50, {
         isStatic: true,
         render: {
-          fillStyle: "white",
-          strokeStyle: "white",
+          fillStyle: "blue",
+          strokeStyle: "blue",
           lineWidth: 3,
         },
       }),
       Bodies.rectangle(800, 300, 50, 600, {
         isStatic: true,
         render: {
-          fillStyle: "white",
-          strokeStyle: "white",
+          fillStyle: "blue",
+          strokeStyle: "blue",
           lineWidth: 3,
         },
       }),
       Bodies.rectangle(0, 300, 50, 600, {
         isStatic: true,
         render: {
-          fillStyle: "white",
-          strokeStyle: "white",
+          fillStyle: "blue",
+          strokeStyle: "blue",
           lineWidth: 3,
         },
       }),
       Bodies.rectangle(400, 606, 800, 50.5, {
         isStatic: true,
         render: {
-          fillStyle: "white",
-          strokeStyle: "white",
+          fillStyle: "blue",
+          strokeStyle: "blue",
           lineWidth: 3,
         },
       }),
