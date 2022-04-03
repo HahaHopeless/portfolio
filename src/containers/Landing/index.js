@@ -21,7 +21,7 @@ const Landing = () => {
       />
       <Intro1 />
       <Intro2 />
-      {/* <Intro3 /> */}
+      <Intro3 />
     </>
   );
 };
