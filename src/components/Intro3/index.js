@@ -30,7 +30,7 @@ export default function Intro3() {
           grabCursor={true}
           modules={[EffectCards]}
           className='mySwiper'
-          spaceBetween={50}
+          spaceBetween={35}
         >
           <SwiperSlide>
             <img
