@@ -59,3 +59,6 @@
   text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
   color: white;
 }
+.modal-content {
+  border-radius: 20px;
+}

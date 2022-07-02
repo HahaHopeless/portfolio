@@ -21,13 +21,9 @@ const Projects = () => {
       <Card
         title='Breaking Bingo'
         goToUrl='https://breakingbingo.netlify.app'
-        bgImage={require("../../assets/images/breakingBingo.png")}
+        bgImage={"breakingBingo.webp"}
       />
-      <Card
-        title='Tr@$h T@lk'
-        extras='18+'
-        bgImage={require("../../assets/images/trashTalk.webp")}
-      />
+      <Card title='Tr@$h T@lk' adult={true} bgImage={"trashTalk.webp"} />
     </section>
   );
 };

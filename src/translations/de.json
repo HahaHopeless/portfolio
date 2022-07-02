@@ -18,5 +18,8 @@
     "firstName": "Vorname",
     "lastName": "Nachname",
     "imADeveloper": "Ich bin ein Front-End-Entwickler, der gerne Dinge für das Internet entwickelt",
-    "learnMore": "Erfahren Sie mehr über mich auf:"
+    "learnMore": "Erfahren Sie mehr über mich auf:",
+    "ageRestriction": "Altersbeschränkung",
+    "ageRestriction.desc": "Sie sind im Begriff, eine Anwendung mit Altersbeschränkung zu öffnen. Sind Sie sicher, dass Sie fortfahren möchten?",
+    "adultsOnly": "Nur für Erwachsene"
 }
