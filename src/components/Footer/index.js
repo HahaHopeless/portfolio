@@ -26,7 +26,9 @@ const Footer = () => {
       </div>
 
       <div className='footer-content'>
-        <span className='txt-white'>Learn more about me on: </span>
+        <span className='txt-white'>
+          <FormattedMessage id='learnMore' />{" "}
+        </span>
 
         {/* FACEBOOK */}
         <div

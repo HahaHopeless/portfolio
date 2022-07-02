@@ -16,5 +16,7 @@
     "visitWebsite": "Visit this website",
     "letsChat": "Lets have a little chat",
     "firstName": "First Name",
-    "lastName": "Last Name"
+    "lastName": "Last Name",
+    "imADeveloper": "I'm a Front-end developer who likes to make things for the web",
+    "learnMore": "Learn more about me on:"
 }

@@ -9,6 +9,8 @@ import animationData from "../../assets/animations/services.json";
 import abstract from "../../assets/animations/abstract.json";
 import { Timeline } from "gsap/gsap-core";
 
+import dotGrid from "../../assets/images/dotGrid2.svg";
+
 const Intro2 = (props) => {
   const defaultOptions = {
     loop: true,
@@ -19,10 +21,10 @@ const Intro2 = (props) => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     var t1 = new Timeline();
-    var t2 = new Timeline();
-    var t3 = new Timeline();
-    var t4 = new Timeline();
-    var t5 = new Timeline();
+    // var t2 = new Timeline();
+    // var t3 = new Timeline();
+    // var t4 = new Timeline();
+    // var t5 = new Timeline();
 
     t1.fromTo(
       ".iMake",
@@ -34,81 +36,107 @@ const Intro2 = (props) => {
         opacity: 1,
         translateX: "translate(130px, 90px) rotate(20deg) skew(20deg, 0deg)",
         scrollTrigger: {
-          trigger: ".iMake",
+          // trigger: ".iMake",
+          trigger: ".hero2",
           toggleActions: "play none none reverse",
           start: "top center",
           end: "bottom center",
           scrub: 1.5,
         },
       }
-    );
-    t2.fromTo(
-      ".appsAnd",
-      { width: 0 },
-      {
-        width: "100%",
-        scrollTrigger: {
-          trigger: ".appsAnd",
-          toggleActions: "play none none none",
-          start: "center center",
-          end: "+=150%",
-          scrub: 1,
+    )
+      .fromTo(
+        ".appsAnd",
+        { width: 0 },
+        {
+          width: "100%",
+          scrollTrigger: {
+            // trigger: ".appsAnd",
+            trigger: ".hero2",
+            toggleActions: "play none none none",
+            start: "center center",
+            end: "+=150%",
+            scrub: 1,
+          },
+        }
+      )
+      .fromTo(
+        ".websites",
+        { rotationX: -90 },
+        {
+          rotationX: 0,
+          scrollTrigger: {
+            // trigger: ".websites",
+            trigger: ".hero2",
+            toggleActions: "play none none none",
+            start: "top -50%",
+            end: "+=60%",
+            scrub: 1,
+          },
+        }
+      )
+      .fromTo(
+        ".apps",
+        {
+          backgroundColor: "#25435d",
+          textShadow: "2px 4px 4px rgba(255, 255, 255, 0)",
         },
-      }
-    );
-    t3.fromTo(
-      ".websites",
-      { rotationX: -90 },
-      {
-        rotationX: 0,
-        scrollTrigger: {
-          trigger: ".websites",
-          toggleActions: "play none none none",
-          start: "top -50%",
-          end: "+=60%",
-          scrub: 1,
+        {
+          backgroundColor: "rgb(0, 104, 255)",
+          textShadow: "0px 0px 5px rgba(0, 104, 254, 0.8)",
+          // "2px 4px 4px rgba(255, 255, 255, 0.15), 0px 0px 5px rgba(0, 104, 254, 0.8)",
+          scrollTrigger: {
+            // trigger: ".apps",
+            trigger: ".hero2",
+            toggleActions: "play none none none",
+            start: "top -100%",
+            end: "+=100%",
+            scrub: 1,
+          },
+        }
+      )
+      .fromTo(
+        ".websites",
+        {
+          backgroundColor: "#25435d",
+          textShadow: "2px 4px 4px rgba(255, 255, 255, 0)",
         },
-      }
-    );
-    t4.fromTo(
-      ".apps",
-      {
-        backgroundColor: "rgb(47, 53, 66)",
-        textShadow: "2px 4px 4px rgba(255, 255, 255, 0)",
-      },
-      {
-        backgroundColor: "rgb(0, 104, 255)",
-        textShadow:
-          "2px 4px 4px rgba(255, 255, 255, 0.15), 0px 0px 5px rgba(0, 104, 254, 0.8)",
-        scrollTrigger: {
-          trigger: ".apps",
-          toggleActions: "play none none none",
-          start: "top -100%",
-          end: "+=100%",
-          scrub: 1,
+        {
+          backgroundColor: "rgb(0, 104, 255)",
+          textShadow: "0px 0px 5px rgba(0, 104, 254, 0.8)",
+          // "2px 4px 4px rgba(255, 255, 255, 0.15), 0px 0px 5px rgba(0, 104, 254, 0.8)",
+          scrollTrigger: {
+            // trigger: ".websites",
+            trigger: ".hero2",
+            toggleActions: "play none none none",
+            start: "top -100%",
+            end: "+=100%",
+            scrub: 1,
+          },
+          markers: true,
+        }
+      )
+      .fromTo(
+        ".dot-grid-intro-2",
+        {
+          transform: "scale(2)",
+          opacity: 0,
         },
-      }
-    );
-    t5.fromTo(
-      ".websites",
-      {
-        backgroundColor: "rgb(47, 53, 66)",
-        textShadow: "2px 4px 4px rgba(255, 255, 255, 0)",
-      },
-      {
-        backgroundColor: "rgb(0, 104, 255)",
-        textShadow:
-          "2px 4px 4px rgba(255, 255, 255, 0.15), 0px 0px 5px rgba(0, 104, 254, 0.8)",
-        scrollTrigger: {
-          trigger: ".websites",
-          toggleActions: "play none none none",
-          start: "top -100%",
-          end: "+=100%",
-          scrub: 1,
-        },
-        markers: true,
-      }
-    );
+        {
+          transform: "scale(6)",
+          opacity: 0.08,
+          marginTop: "100px",
+          marginRight: "100px",
+          scrollTrigger: {
+            trigger: ".hero2",
+            toggleActions: "play none none none",
+            start: "top -100%",
+            end: "+=100%",
+            scrub: 1,
+          },
+          markers: true,
+        }
+      );
 
     gsap.timeline({
       scrollTrigger: {
@@ -130,23 +158,23 @@ const Intro2 = (props) => {
     };
   }, []);
 
-  const interactivity = {
-    mode: "scroll",
-    actions: [
-      {
-        visibility: [0.45, 1.0],
-        type: "loop",
-        frames: [22, 110],
-      },
-    ],
-  };
+  // const interactivity = {
+  //   mode: "scroll",
+  //   actions: [
+  //     {
+  //       visibility: [0.45, 1.0],
+  //       type: "loop",
+  //       frames: [22, 110],
+  //     },
+  //   ],
+  // };
 
   return (
     <section
       style={{ height: "100vh" }}
       className='hero2 vw-100 d-flex flex-column align-items-center justify-content-center overflow-hidden'
     >
-      <Lottie
+      {/* <Lottie
         isStopped={false}
         style={{
           userSelect: "none",
@@ -160,7 +188,13 @@ const Intro2 = (props) => {
         }}
         animationData={abstract}
         // interactivity={interactivity}
+      /> */}
+      <img
+        src={dotGrid}
+        className='dot-grid-intro-2'
+        title='This photo was taken and edited on a cheap Android phone'
       />
+
       <div className='container-fluid row '>
         <div className='col-md-4 d-flex align-items-start animation'>
           <Lottie
@@ -188,7 +222,7 @@ const Intro2 = (props) => {
             style={{
               fontWeight: "800",
               fontSize: "4vw",
-              textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
+              // textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
               userSelect: "none",
               // marginBottom: "-3vw",
             }}
@@ -201,10 +235,10 @@ const Intro2 = (props) => {
             style={{
               fontWeight: "900",
               fontSize: "10.5vw",
-              textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
+              // textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
               marginLeft: "-0.35vw",
               userSelect: "none",
-              textOverflow: "clip",
+              // textOverflow: "clip",
               overflow: "hidden",
               marginBottom: "-5vw",
               whiteSpace: "nowrap",
@@ -219,7 +253,7 @@ const Intro2 = (props) => {
               style={{
                 fontWeight: "400",
                 fontSize: "8vw",
-                textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
+                // textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
                 marginLeft: "-0.35vw",
                 userSelect: "none",
                 display: "inline-block",
@@ -235,7 +269,7 @@ const Intro2 = (props) => {
             style={{
               fontWeight: "900",
               fontSize: "10.5vw",
-              textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
+              // textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
               userSelect: "none",
               transformOrigin: "bottom",
               transform: "skew(0deg, 21deg)",

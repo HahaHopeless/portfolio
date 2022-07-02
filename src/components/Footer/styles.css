@@ -65,6 +65,11 @@
   cursor: pointer;
   filter: drop-shadow(0px 0px 10px rgba(0, 104, 250, 1));
 }
+.icon-fill.linkedin:hover {
+  fill: rgba(0, 114, 177, 1);
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 10px rgba(0, 114, 177, 1));
+}
 .icon-fill.fiverr:hover {
   fill: rgba(46, 213, 115, 1);
   cursor: pointer;

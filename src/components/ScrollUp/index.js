@@ -35,7 +35,7 @@ const ScrollUp = (props) => {
                   opacity: 0.5,
                 },
               ],
-              duration: 2000,
+              duration: 1500,
               easing: "easeOutElastic(1, 2)",
               loop: true,
             },
@@ -100,7 +100,7 @@ const ScrollUp = (props) => {
                 },
               ],
               easing: "easeOutElastic(1, 2)",
-              duration: 2000,
+              duration: 1500,
               loop: true,
             },
           ]}

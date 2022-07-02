@@ -2,12 +2,9 @@ import "./styles.css";
 import React, { useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 import VanillaTilt from "vanilla-tilt";
-import { usePalette } from "react-palette";
 import Card from "../../components/Card";
-import imgPath from "../../assets/images/breakingBingo.png";
 
 const Projects = () => {
-  const { data, loading, error } = usePalette(imgPath);
   useEffect(() => {
     VanillaTilt.init(document.querySelectorAll(".js-tilt"), {
       max: 15,
@@ -23,12 +20,14 @@ const Projects = () => {
     >
       <Card
         title='Breaking Bingo'
-        bgColor={data.vibrant}
-        bgImage={require("../../assets/images/breakingBingo.png")}
         goToUrl='https://breakingbingo.netlify.app'
+        bgImage={require("../../assets/images/breakingBingo.png")}
       />
-      <Card title='Impressentation' />
-      <Card title='Der Markt' />
+      <Card
+        title='Tr@$h T@lk'
+        extras='18+'
+        bgImage={require("../../assets/images/trashTalk.webp")}
+      />
     </section>
   );
 };

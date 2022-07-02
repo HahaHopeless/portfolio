@@ -9,3 +9,16 @@
   color: transparent !important;
   width: 100%;
 }
+.dot-grid-intro-2 {
+  width: 100px;
+  object-fit: contain;
+  position: absolute;
+  top: 100px;
+  right: 10vw;
+  opacity: 0.2;
+  fill: rgba(98, 125, 225) !important;
+}
+.layer2 {
+  top: 120px;
+  right: 15vw;
+}
