@@ -17,7 +17,6 @@ const Card = (props) => {
 
   return (
     <>
-      {console.log("__ BG Image: ", props.bgImage)}
       <div
         className='card container js-tilt'
         style={{

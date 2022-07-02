@@ -11,6 +11,7 @@ import { Timeline } from "gsap/gsap-core";
 import "../../../node_modules/swiper/swiper-bundle.min.css";
 import "../../../node_modules/swiper/modules/effect-cards/effect-cards.min.css";
 import "./styles.css";
+import { FormattedMessage } from "react-intl";
 
 export default function Intro3() {
   // var swiper = new Swiper(".swiper-container", {
@@ -188,7 +189,9 @@ export default function Intro3() {
         >
           👆​
         </h3>
-        <p className='swipe-desc'>Swipe to see more</p>
+        <p className='swipe-desc'>
+          <FormattedMessage id='swipe' />
+        </p>
       </div>
     </div>
   );
