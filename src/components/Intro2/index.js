@@ -3,10 +3,8 @@ import React, { useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
-// import Lottie from "react-lottie";
 import Lottie from "lottie-react";
 import animationData from "../../assets/animations/services.json";
-import abstract from "../../assets/animations/abstract.json";
 import { Timeline } from "gsap/gsap-core";
 
 import dotGrid from "../../assets/images/dotGrid2.svg";

@@ -1,6 +1,5 @@
 import "./styles.css";
 import React, { useEffect } from "react";
-import { FormattedMessage } from "react-intl";
 import VanillaTilt from "vanilla-tilt";
 import Card from "../../components/Card";
 

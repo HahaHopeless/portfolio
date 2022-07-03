@@ -22,5 +22,8 @@
     "ageRestriction": "Age Restriction",
     "ageRestriction.desc": "You are about to open an age restricted app. Are you sure you want to continue?",
     "adultsOnly": "Adults Only",
-    "swipe": "Swipe to see more"
+    "swipe": "Swipe to see more",
+    "pageNotFound": "Oops! We couldn't find what you were looking for",
+    "resourceMoved": "It's possible the resource has moved.",
+    "gotoStart": "Go to Homepage"
 }

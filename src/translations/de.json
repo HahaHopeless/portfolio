@@ -22,5 +22,8 @@
     "ageRestriction": "Altersbeschränkung",
     "ageRestriction.desc": "Sie sind im Begriff, eine Anwendung mit Altersbeschränkung zu öffnen. Sind Sie sicher, dass Sie fortfahren möchten?",
     "adultsOnly": "Nur für Erwachsene",
-    "swipe": "Wischen Sie, um mehr zu sehen"
+    "swipe": "Wischen Sie, um mehr zu sehen",
+    "pageNotFound": "Huch! Wir konnten nicht finden, wonach Sie gesucht haben",
+    "resourceMoved": "Es ist möglich, dass die Ressource verschoben wurde.",
+    "gotoStart": "Zur Startseite"
 }
