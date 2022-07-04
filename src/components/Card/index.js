@@ -5,6 +5,7 @@ import Lottie from "react-lottie";
 import WarningAnimation from "../../assets/animations/warning.json";
 import GradientButton from "../GradientButton";
 import { Modal } from "react-bootstrap";
+import { X } from "react-bootstrap-icons";
 
 const Card = (props) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -81,7 +82,14 @@ const Card = (props) => {
         aria-labelledby='contained-modal-title-vcenter'
         centered
       >
-        <Modal.Header closeButton></Modal.Header>
+        {/* <Modal.Header closeButton></Modal.Header> */}
+        <div className='w-100 d-flex justify-content-end align-items-center pr-2 pt-1'>
+          <X
+            size={24}
+            className='x-icon'
+            onClick={() => setIsModalVisible(false)}
+          />
+        </div>
         <Modal.Body>
           <div
             style={{
@@ -125,7 +133,7 @@ const Card = (props) => {
           }}
         >
           <GradientButton
-            text='I am 18+'
+            text={<FormattedMessage id='iAm18+' />}
             onClick={() => {
               setIsModalVisible(false);
               window.open(`${props.goToUrl}`, "_blank");

@@ -5,6 +5,7 @@ import ScrollUp from "../../components/ScrollUp";
 import Intro1 from "../../components/Intro1";
 import Intro2 from "../../components/Intro2";
 import Intro3 from "../../components/Intro3";
+import gsap from "gsap";
 
 const Landing = () => {
   const fadeInOut = () => {
@@ -12,6 +13,10 @@ const Landing = () => {
       return "fade-out";
     }, 200);
   };
+
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+  // }, []);
 
   return (
     <>

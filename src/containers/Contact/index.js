@@ -1,4 +1,5 @@
 import "./styles.css";
+import "react-glass-cards/dist/index.css";
 import React, { useState } from "react";
 import { FormattedMessage } from "react-intl";
 import Lottie from "lottie-react";

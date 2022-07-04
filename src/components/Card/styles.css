@@ -73,3 +73,17 @@
 .modal-footer {
   border: 0px;
 }
+.x-icon {
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  color: #25435d;
+  border-radius: 100%;
+}
+.x-icon:hover {
+  background-color: rgba(38, 68, 92, 0.3);
+  border-radius: 100%;
+  color: black;
+}
+.x-icon:active {
+  background-color: rgba(38, 68, 92, 0.6);
+}

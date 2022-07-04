@@ -11,11 +11,11 @@ function NotFound() {
       <Lottie
         isStopped={false}
         style={{
-          zIndex: 99,
           userSelect: "none",
           cursor: "default",
-          width: 500,
-          height: 500,
+          width: "100%",
+          height: "400px",
+          objectFit: "contain",
         }}
         animationData={animationData}
       />
@@ -26,7 +26,9 @@ function NotFound() {
         <FormattedMessage id='resourceMoved' />
       </p>
       <Link to='/'>
-        <FormattedMessage id='gotoStart' />
+        <h6>
+          <FormattedMessage id='gotoStart' />
+        </h6>
       </Link>
     </div>
   );
