@@ -73,9 +73,10 @@ const Contact = () => {
             />
             <small className='float-right'>{message.length}/500</small>
           </div>
-          <button type='submit' class='btn btn-primary'>
+          {/* <button type='submit' class='btn btn-primary'>
             Send
-          </button>
+          </button> */}
+          <a href='mailto:mohsinakbar0395@gmail.com'>Send Feedback</a>
         </form>
       </div>
     </>

@@ -63,7 +63,7 @@ const Navbar = (props) => {
                 <FormattedMessage id='projects' />
               </Link>
             </Nav.Link>
-            <Nav.Link
+            {/* <Nav.Link
               className={
                 location.pathname === "/contact"
                   ? "app-link active"
@@ -74,7 +74,8 @@ const Navbar = (props) => {
               <Link to='/contact'>
                 <FormattedMessage id='contact' />
               </Link>
-            </Nav.Link>
+            </Nav.Link> */}
+
             <NavDropdown
               title={
                 <img

@@ -7,10 +7,11 @@ import facebook from "../../assets/icons/facebook.svg";
 import instagram from "../../assets/icons/instagram.svg";
 import linkedin from "../../assets/icons/linkedin.svg";
 import fiverr from "../../assets/icons/fiverr.svg";
+import { EnvelopeFill } from "react-bootstrap-icons";
 
 const Footer = () => {
   return (
-    <footer className='d-flex justify-content-center footer-container'>
+    <footer className='d-flex flex-column justify-content-center footer-container'>
       <div class='custom-shape-divider-top-1649009689'>
         <svg
           data-name='Layer 1'
@@ -204,6 +205,12 @@ const Footer = () => {
           </svg>
         </div>
       </div>
+
+      {/* <div style={{ background: "#2f3542" }}>
+        <a href='mailto:mohsinakbar0395@gmail.com'>
+          <EnvelopeFill className='envelope-icon' />
+        </a>
+      </div> */}
     </footer>
   );
 };

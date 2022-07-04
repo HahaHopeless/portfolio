@@ -9,7 +9,7 @@
 }
 
 .app-link {
-  transition: all 0.25s;
+  transition: all 0.2s;
   font-weight: 600;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
   /* padding: 10px; */
@@ -21,7 +21,7 @@
 }
 
 .app-link.active {
-  transition: all 0.25s;
+  transition: all 0.2s;
   color: #0068fa !important;
   font-size: 20px;
   background: #0068fa;
